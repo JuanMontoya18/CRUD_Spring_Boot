@@ -19,4 +19,25 @@ public class EstudianteServivioImpl implements EstudianteServicio {
         return estudianteRepositorio.findAll();
     }
 
+    @Override
+    public Estudiante guardarEstudiante(Estudiante estudiante) {
+        // TODO Auto-generated method stub
+        return estudianteRepositorio.save(estudiante);
+    }
+
+    @Override
+    public Estudiante obtenerEstudianteid(long id) {
+        return estudianteRepositorio.findById(id).get();
+    }
+
+    @Override
+    public Estudiante actualizarEstudiante(Estudiante estudiante) {
+        return estudianteRepositorio.save(estudiante);
+    }
+
+    @Override
+    public void eliminarEstudiante(long id) {
+        estudianteRepositorio.deleteById(id);
+    }
+
 }
